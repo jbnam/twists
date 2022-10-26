@@ -222,7 +222,7 @@ Note: For better loading procedure and storage saving, the tw_central_l_values a
 The output data consist of the tuples of following 11 entries:
 
  $$
- [ N, k, \mathfrak{f}_\chi, r_{\chi}, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ [ N, k, \mathfrak f_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
 
 where
@@ -247,7 +247,7 @@ Note: Even though FLINT and GMP support arbitrary precision integer and float co
 The output data consist of the tuples of following 11 entries:
 
  $$
- [ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ [ N, k, \mathfrak f_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
 
 where
