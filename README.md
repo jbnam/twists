@@ -27,7 +27,7 @@ where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\ch
 Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
 
 $$
-L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp} (-2\pi n/\mathfrak f_\chi \sqrt{N} ) \tag{1}
+L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp} (-2\pi n/\mathfrak f_\chi \sqrt{N} ) \qquad\qquad(1)
 $$
 
 where $a_n$ and $w_E$ are the coefficients and the root number of $L(E, s)$, respectively, and $C_{\chi} = \chi(N) \tau^2(\chi)/\mathfrak{f}_\chi$ where $\tau(\chi)$ is the Gauss sum of $\chi$. Here $\overline{\chi}$ is the complex conjugate of $\chi$ and $\text{exp}$ is the exponential function.
@@ -110,7 +110,9 @@ Note: For more detailed requirements of compilers and external libraries above, 
 
 ### Output Data
 The output data consist of the tuples of following 13 entries:
- $$[ N, k, \mathfrak{f}_\chi, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]$$
+ $$
+ [ N, k, \mathfrak{f}_\chi, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ $$
 where
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
 - $k$ \- The order of a primitive Dirichlet character $\chi$
@@ -216,7 +218,9 @@ Note: For better loading procedure and storage saving, the tw_central_l_values a
 
 ### Python Data Converted from Raw Data Obtained by twists_clve 
 The output data consist of the tuples of following 11 entries:
- $$[ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]$$
+ $$
+ [ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ $$
 where
 
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
@@ -237,7 +241,9 @@ Note: Even though FLINT and GMP support arbitrary precision integer and float co
 **TODO WHY ZIP? Precision**
 
 The output data consist of the tuples of following 11 entries:
- $$[ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]$$
+ $$
+ [ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ $$
 where
 
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
