@@ -21,7 +21,7 @@ $$
 
 where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\chi$ is the conductor of $\chi$. Moreover, denote $\zeta_k := e^{2 \pi i/k}$ and $Z_k := \big[0, \zeta_k, \zeta_k^2, \ldots, \zeta_k^{k-1}, 1\big]$ for a fixed $k$.
 
-Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal{B}_{k,N}(X)$ by the following well-known formula:
+Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
 $$
 L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_{\chi}\overline{\chi}(n))\frac{a_n}{n}\text{exp}\big(-2\pi n/\mathfrak{f}_\chi \sqrt{N}\big) \tag{1}
 $$
