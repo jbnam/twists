@@ -258,10 +258,10 @@ Note: For better loading procedure and storage saving, the tw_central_l_values a
 
 ### Class object tw_central_l_values for E_k_X_central_l_values.npz
 Class tw_central_l_values consists of the following members:  
-- E - The elliptic curve associated with E_k_X_central_l_values.npz
-- k - The order of the family of characters associated with E_k_X_central_l_values.npz
-- num_twists - The cardinality of this family
-- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively
+- E - The elliptic curve associated with E_k_X_central_l_values.npz: : SageMath EllipticCurve_rational_field_with_category class
+- k - The order of the family of characters associated with E_k_X_central_l_values.npz: Python int
+- num_twists - The cardinality of this family: Python int
+- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively: Python int
 - chi_cond - Numpy array of $\mathfrak f_\chi$'s: dtype=uint32
 - chi_label - Numpy array of $r_\chi$'s: dtype=uint32
 - l_value - Numpy array of $L(E, 1, \chi)$'s: dtype=cdouble
@@ -274,14 +274,14 @@ Class tw_central_l_values consists of the following members:
 
 ### Class object  of Algebraic and Integer $L$-values for E_k_X_alg_int_l_values.zip
 Class tw_alg_int_l_values consists of the following members:  
-- E - The elliptic curve associated with E_k_X_central_l_values.npz
-- k - The order of the family of characters associated with E_k_X_central_l_values.npz
-- num_twists - The cardinality of this family
-- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively
-- g - the greatest common divisor of all $A_\chi$'s in $\mathcal{B}_{k,N}(X)$
+- E - The elliptic curve associated with E_k_X_central_l_values.npz: SageMath EllipticCurve_rational_field_with_category class
+- k - The order of the family of characters associated with E_k_X_central_l_values.npz: Python int
+- num_twists - The cardinality of this family: Python int
+- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively: Python int
+- g - the greatest common divisor of all $A_\chi$'s in $\mathcal{B}_{k,N}(X)$: Python int
 - chi_cond - Numpy array of $\mathfrak f_\chi$'s: dtype=uint32
 - chi_label - Numpy array of $r_\chi$'s: dtype=uint32
-- A_chi_div_g - Numpy array of $A_\chi / g$'s
+- A_chi_div_g - Numpy array of $A_\chi / g$'s Python int
 - alg_part_l - Numpy array of $L_E^{\text{alg}}(\chi)$'s: dtype=cdouble
 - alp_chi - Numpy array of $\alpha_\chi$'s: dtype=double
 - c - Numpy array of $c$'s: dtype=uint32
