@@ -219,7 +219,7 @@ Note: For better loading procedure and storage saving, the tw_central_l_values a
 ### Python Data Converted from Raw Data Obtained by twists_clve 
 The output data consist of the tuples of following 11 entries:
  $$
- [ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ [ N, k, \mathfrak{f}_\chi, r_{\chi}, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
 where
 
