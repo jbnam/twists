@@ -321,10 +321,12 @@ class tw_central_l_values:
 
     @classmethod
     def load_from_dat(cls, E_label, k, path, X=3):
+        os_pwd= os.getcwd()
+        os.chdir(path)
         f_name = E_label+'_'+str(k)+'_'+str(X)+'m_raw.dat'
         
         #find the number of rows in the file
-        fp = open(path+f_name, 'r')
+        fp = open(f_name, 'r')
         for num_twists, line in enumerate(fp):
             pass
         num_twists += 1
@@ -355,15 +357,19 @@ class tw_central_l_values:
             num_terms[j] = t_str[12]
             
         fp.close()
+        os.chdir(os_pwd)
         
         return cls(E_label, k, X, chi_cond, chi_label, l_value, gauss_sum_chi,\
                    exp_chi_N, c, exp_chi_c, exp_sign_chi, num_terms)
     
     @classmethod
     def load_from_npz(cls, E_label, k, path, X=3):
-        f_name = E_label+'/'+E_label+'_'+str(k)+'_'+str(X)+'m_central_l_values.npz'
+        os_pwd= os.getcwd()
+        os.chdir(path)
         
-        with np.load(path+f_name) as data:
+        f_name = E_label+'_'+str(k)+'_'+str(X)+'m_central_l_values.npz'
+        
+        with np.load(f_name) as data:
             E_label = data['info_twists'][0]
             k = data['info_twists'][1]
             X = data['info_twists'][2]
@@ -377,21 +383,27 @@ class tw_central_l_values:
             exp_sign_chi = data['exp_sign_chi']
             num_terms = data['num_terms']
 
+        os.chdir(os_pwd)
+
         return cls(E_label, k, X, chi_cond, chi_label, l_value, gauss_sum_chi,\
                    exp_chi_N, c, exp_chi_c, exp_sign_chi, num_terms)
     
     def save_to_npz(self, path):
-        os.makedirs(path+self.E.label(), exist_ok=True)
-        f_name = self.E.label()+'/'+self.E.label()+'_'+str(self.k)+'_'+\
-        str(self.X)+'m_central_l_values.npz'
+        os.makedirs(path, exist_ok=True)
+        os_pwd= os.getcwd()
+        os.chdir(path)
+
+        #os.makedirs(path+self.E.label(), exist_ok=True)
+        f_name = self.E.label()+'_'+str(self.k)+'_'+str(self.X)+'m_central_l_values.npz'
 
         info_twists = np.array([self.E.label(), self.k, self.X])
         
-        np.savez_compressed(path+f_name, info_twists=info_twists, chi_cond=self.chi_cond,\
+        np.savez_compressed(f_name, info_twists=info_twists, chi_cond=self.chi_cond,\
                             chi_label=self.chi_label, l_value=self.l_value,\
                             gauss_sum_chi=self.gauss_sum_chi, exp_chi_N=self.exp_chi_N,\
                             c=self.c, exp_chi_c=self.exp_chi_c,\
                             exp_sign_chi=self.exp_sign_chi, num_terms=self.num_terms)
+        os.chdir(os_pwd)
 
 class tw_alg_int_l_values:
     r"""
@@ -513,14 +525,14 @@ class tw_alg_int_l_values:
         since these may not be able to fit a 64 bits integer due to some large `k` 
         such as `k = 13`.
         """
-        path += E_label+'/'
         os.makedirs(path, exist_ok=True)
         os_pwd= os.getcwd()
         os.chdir(path)
         
-        f_name_zip = E_label+'_'+str(k)+'_'+str(X)+'m_alg_int_l_values.zip'
-        f_name_npz = E_label+'_'+str(k)+'_'+str(X)+'m_alg_int_l_values.npz'
-        f_name_sobj = E_label+'_'+str(k)+'_'+str(X)+'m_alg_int_l_values.sobj'
+        f_name = path+E_label+'_'+str(k)+'_'+str(X)
+        f_name_zip = f_name+'m_alg_int_l_values.zip'
+        f_name_npz = f_name+'m_alg_int_l_values.npz'
+        f_name_sobj = f_name+'m_alg_int_l_values.sobj'
 
         with ZipFile(f_name_zip, 'r') as zf:
             zf.extractall()
@@ -547,23 +559,24 @@ class tw_alg_int_l_values:
                 alp_chi, exp_sign_chi, exp_chi_minus_N)
 
     def save_to_zip(self, path):
-        path += self.E.label()+'/'
         os.makedirs(path, exist_ok=True)
         os_pwd= os.getcwd()
         os.chdir(path)
+
+        f_name = path+self.E.label()+'_'+str(self.k)+'_'+str(self.X)
         
-        f_name_zip = self.E.label()+'_'+str(self.k)+'_'+str(self.X)+'m_alg_int_l_values.zip'
-        f_name_npz = self.E.label()+'_'+str(self.k)+'_'+str(self.X)+'m_alg_int_l_values.npz'
-        f_name_sobj = self.E.label()+'_'+str(self.k)+'_'+str(self.X)+'m_alg_int_l_values.sobj'
+        f_name_zip = f_name+'m_alg_int_l_values.zip'
+        f_name_npz = f_name+'m_alg_int_l_values.npz'
+        f_name_sobj = f_name+'m_alg_int_l_values.sobj'
         
         info_twists = np.array([self.E.label(), self.k, self.X, self.g])
-        
+
         np.savez_compressed(f_name_npz, info_twists=info_twists, chi_cond=self.chi_cond,\
                             chi_label=self.chi_label, alg_part_l=self.alg_part_l, \
                             alp_chi=self.alp_chi, exp_sign_chi=self.exp_sign_chi,\
                             exp_chi_minus_N=self.exp_chi_minus_N)
-        
-        save(self.A_chi_div_g, path+f_name_sobj)
+
+        save(self.A_chi_div_g, f_name_sobj)
         
         with ZipFile(f_name_zip, 'w') as zf:
             zf.write(f_name_npz)
