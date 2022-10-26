@@ -13,7 +13,7 @@ If you have a comment/question regarding this codes package and the sample data 
 
 ## Download Links for Source Codes and Sample Data
 - Source codes links: The author's GitHub site (https://github.com/jbnam/twists/) or Zenodo archive site
-- Sample data link: The author's Zenodo archive site [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255336.svg)](https://doi.org/10.5281/zenodo.7255336)
+- Sample data link: The author's Zenodo archive site [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255396.svg)](https://doi.org/10.5281/zenodo.7255396)
 
 
 ## 1) Introduction
@@ -81,7 +81,7 @@ Data file naming convensions for the sample data are
 
 Note: If a data file contains X = 3m (or 1m) in its name, it means the data contains the $L$-values for $\chi$ of conductor less than or equal to $3\cdot 10^6$ (or $10^6$, respectively).
 
-In Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255336.svg)](https://doi.org/10.5281/zenodo.7255336):
+In Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255396.svg)](https://doi.org/10.5281/zenodo.7255396):
 
 One can find two zip files: twists_clve_data.zip (17 GB) and twists_ailve_data.zip (13 GB). twists_clve_data.zip and twists_ailve_data.zip contain the E_k_X_central_l_values.npz files and E_k_X_alg_int_l_values.zip files, respectively, with some natural directory structure for k = $3, 5, 6, 7, 13$ and the following elliptic curves E:  
 ```
