@@ -157,7 +157,6 @@ The hardware systems for obtaining these sample data are
 - GPU: NVIDIA GeForce ® GTX 1080 Ti
 
 Considering the cloud storage limit of Zenodo, the raw output data of twists_clve are converted into Python compatible data format and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo.
-**TODO: Archived has directory structure**
 
 ## 3) twists_ailve
 
