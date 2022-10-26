@@ -32,15 +32,7 @@ $$
 
 where $a_n$ and $w_E$ are the coefficients and the root number of $L(E, s)$, respectively, and $C_{\chi} = \chi(N) \tau^2(\chi)/\mathfrak{f}_\chi$ where $\tau(\chi)$ is the Gauss sum of $\chi$. Here $\overline{\chi}$ is the complex conjugate of $\chi$ and $\text{exp}$ is the exponential function.
 
-Note: The twists package uses the label of $E$ as the Cremona's elliptic curve label.
-
-Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$ and $\mathcal B_k$ be the family of primitive Dirichlet characters of order $k$. Define 
-
-$$
-\mathcal{B}_{k,N}(X) = \lbrace \chi \in \mathcal B_k \mid \mathfrak{f}_\chi \leq X \text{ and } \text{gcd}(N, \mathfrak{f}_\chi)=1 \rbrace
-$$
-
-where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\chi$ is the conductor of $\chi$. The algebraic part of $L(E,1,\chi)$ is defined as 
+The algebraic part of $L(E,1,\chi)$ is defined as 
 
 $$
 L_E^{\text{alg}}(\chi) = \frac{2\tau(\overline{\chi})}{\Omega_\chi}L(E,1,\chi)
@@ -48,7 +40,9 @@ $$
 
 where  $\tau(\chi)$ is the Gauss sum of $\chi$ and $\Omega_\chi = \Omega^{\pm}$ is a period df $E$ depending on the signs of $\chi$. It is known that the algebraic part is an algebraic integer in the cyclotomic field $\mathbb{Q}(\chi)$ adjoining with the values of $\chi$.
 
-Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal{O}_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^{\text{alg}}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal{O}_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_{\chi^\sigma}$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote $A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \in \mathbb{Z}$ where $\text{Nm}$ is the field norm.
+Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal O_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^\text{alg}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal{O}_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_\chi^\sigma$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote $A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \in \mathbb{Z}$ where $\text{Nm}$ is the field norm.
+
+Note: The twists package uses the label of $E$ as the Cremona's elliptic curve label.
 
 [1] [Hershy Kisilevsky](https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=hershy-kisilevsky) and [Jungbae Nam](https://jbnam.github.io/). *Small Algebraic Central Values of Twists of Elliptic `$L$`-Functions*, 2022 ([Preprint](https://arxiv.org/abs/2001.03547))
 
