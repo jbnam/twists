@@ -40,7 +40,13 @@ $$
 
 where  $\tau(\chi)$ is the Gauss sum of $\chi$ and $\Omega_\chi = \Omega^{\pm}$ is a period df $E$ depending on the signs of $\chi$. It is known that the algebraic part is an algebraic integer in the cyclotomic field $\mathbb{Q}(\chi)$ adjoining with the values of $\chi$.
 
-Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal O_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^\text{alg}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal O_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_\chi^\sigma$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote $A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \in \mathbb{Z}$ where $\text{Nm}$ is the field norm.
+Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal O_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^\text{alg}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal O_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_\chi^\sigma$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote 
+
+$$
+A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \in \mathbb{Z}
+$$ 
+
+where $\text{Nm}$ from $\mathbb Q^+(\chi)$ to $\mathbb Q$ is the field norm.
 
 Note: The twists package uses the label of $E$ as the Cremona's elliptic curve label.
 
