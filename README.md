@@ -111,7 +111,7 @@ Note: For more detailed requirements of compilers and external libraries above, 
 ### Output Data
 The output data consist of the tuples of following 13 entries:
  $$
- [ N, k, {\mathfrak{f}}_{\chi}, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
+ [ N, k, \mathfrak f_\chi, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
 where
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
