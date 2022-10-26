@@ -19,7 +19,7 @@ If you have a comment/question regarding this codes package and the sample data 
 Let $\mathcal B_k$ be the family of primitive Dirichlet characters of order $k$ and define
 
 $$
-\mathcal B_{k,N}(X) = \{ \chi \in \mathcal B_k \mid \mathfrak{f}_\chi \leq X \text{ and } \text{gcd} ( N, \mathfrak f_\chi )=1 \}
+\mathcal B_{k,N}(X) = \lbrace \chi \in \mathcal B_k \mid \mathfrak{f}_\chi \leq X \text{ and } \text{gcd} ( N, \mathfrak f_\chi )=1 \rbrace
 $$
 
 where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\chi$ is the conductor of $\chi$. Moreover, denote $\zeta_k := e^{2 \pi i/k}$ and $Z_k := \big[0, \zeta_k, \zeta_k^2, \ldots, \zeta_k^{k-1}, 1\big]$ for a fixed $k$.
@@ -27,7 +27,7 @@ where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\ch
 Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
 
 $$
-L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp} (-2\pi n/\mathfrak f_\chi \sqrt{N} ) \qquad\qquad(1)
+L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp} (-2\pi n/\mathfrak (f_\chi \sqrt{N}) ) \qquad\qquad(1)
 $$
 
 where $a_n$ and $w_E$ are the coefficients and the root number of $L(E, s)$, respectively, and $C_{\chi} = \chi(N) \tau^2(\chi)/\mathfrak{f}_\chi$ where $\tau(\chi)$ is the Gauss sum of $\chi$. Here $\overline{\chi}$ is the complex conjugate of $\chi$ and $\text{exp}$ is the exponential function.
