@@ -82,7 +82,7 @@ Note: If a data file contains X = 3m (or 1m) in its name, it means the data cont
 In Zenodi (**TADO: id**), one can find two zip files: twists_clve_data.zip (17 GB) and twists_ailve_data.zip (13 GB). twists_clve_data.zip and twists_ailve_data.zip contain the E_k_X_central_l_values.npz files and E_k_X_alg_int_l_values.zip files, respectively, with some natural directory structure for k = $3, 5, 6, 7, 13$ and the following elliptic curves E:  
 
 $$
-  \text{11a1, 14a1, 15a1, 17a1, 19a1,} \\ \text{20a1, 21a1, 24a1, 26a1, 26b1, 27a1,} \\ \text{30a1, 32a1, 33a1, 34a1, 35a1, 36a1, 37a1, 37b1, 38a1, 38b1, 39a1,}\\ \text{40a1, 42a1, 43a1, 44a1, 45a1, 46a1, 48a1, 49a1,} \\ \text{50a1, 50b1, 51a1, 52a1, 53a1, 54a1, 54b1, 55a1, 56a1, 57a1, 57b1, 57c1, 58a1, 58b1,} \\ \text{61a1, 62a1, 63a1, 64a1, 65a1, 66a1, 66b1, 66c1, 67a1, 69a1,} \\ \text{70a1, 72a1, 73a1, 75a1, 75b1, 75c1, 76a1, 77a1, 77b1, 77c1, 78a1, 79a1,} \\ \text{80a1, 80b1, 82a1, 83a1, 84a1, 84b1, 85a1, 88a1, 89a1, 89b1,} \\ \text{90a1, 90b1, 90c1, 91a1, 91b1, 92a1, 92b1, 94a1, 96a1, 96b1, 98a1, 99a1, 99b1, 99c1, 99d1}
+  \text{11a1, 14a1, 15a1, 17a1, 19a1, 20a1, 21a1, 24a1, 26a1, 26b1, 27a1, 30a1, 32a1, 33a1, 34a1, 35a1, 36a1, 37a1, 37b1, 38a1, 38b1, 39a1,  40a1, 42a1, 43a1, 44a1, 45a1, 46a1, 48a1, 49a1, 50a1, 50b1, 51a1, 52a1, 53a1, 54a1, 54b1, 55a1, 56a1, 57a1, 57b1, 57c1, 58a1, 58b1, 61a1, 62a1, 63a1, 64a1, 65a1, 66a1, 66b1, 66c1, 67a1, 69a1, 70a1, 72a1, 73a1, 75a1, 75b1, 75c1, 76a1, 77a1, 77b1, 77c1, 78a1, 79a1, 80a1, 80b1, 82a1, 83a1, 84a1, 84b1, 85a1, 88a1, 89a1, 89b1, 90a1, 90b1, 90c1, 91a1, 91b1, 92a1, 92b1, 94a1, 96a1, 96b1, 98a1, 99a1, 99b1, 99c1, 99d1}
 $$
 
 One can unzip them on your local system and read the data directly with twists_ailve on SageMath.
