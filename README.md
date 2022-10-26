@@ -124,10 +124,10 @@ where
 - $\Im(L)$ \- The imaginary part of $L(E, 1, \chi)$
 - $\Re(\tau(\chi))$ \- The real part of the Gauss sum of $\chi$
 - $\Im(\tau(\chi))$ \- The imaginary part of the Gauss sum of $\chi$
-- $e_\chi(N)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(N)$
+- $e_\chi(N)$ \- Index of $Z_k$ at which the value of $Z_k$ is $\chi(N)$
 - $c$ \- The least positive integer with $\chi(c)$ is a primitive $k$-th root of unity
-- $e_\chi(c)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(c)$
-- $e_\chi(-1)$ \- The index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
+- $e_\chi(c)$ \- Index of $Z_k$ at which the value of $Z_k$ is $\chi(c)$
+- $e_\chi(-1)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
 - $T_\chi$ \- The number of terms computed for the value $L(E,1,\chi)$ in Equation (1)
 
 Note: Even though FLINT and GMP support arbitrary precision integer and float computations, the output float data are of double precision type at most due to the limited support of CUDA.
@@ -218,31 +218,23 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
    ```
 Note: For better loading procedure and storage saving, the tw_central_l_values and tw_alg_int_l_values classes use Numpy for each array element except the A_chi_div_g list of tw_alg_int_l_values class. It is because that the absolute value of an integer element in that list can easily be greater than the maximum allowed for a 64-bit integer (one can find those integer elements for $k = 13$ in the sample data).
 
-### Python Data Converted from Raw Data Obtained by twists_clve 
-**TODO FINISH IT**
-The output data consist of the tuples of following 11 entries:
+### Class object tw_central_l_values for E_k_X_central_l_values.npz
+Class tw_central_l_values consists of the following members:  
+- E - The elliptic curve associated with E_k_X_central_l_values.npz
+- k - The order of the family of characters associated with E_k_X_central_l_values.npz
+- num_twists - The cardinality of this family
+- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively
+- chi_cond - Numpy array of $\mathfrak f_\chi$'s: dtype=uint32
+- chi_label - Numpy array of $r_\chi$'s: dtype=uint32
+- l_value - Numpy array of $L(E, 1, \chi)$'s: dtype=cdouble
+- gauss_sum_chi - Numpy array of $\tau(\chi)$'s: dtype=cdouble
+- exp_chi_N - Numpy array of $e_\chi(N)$'s: dtype=uint16
+- c - Numpy array of $c$'s: dtype=uint32
+- exp_chi_c - Numpy array of $e_\chi(c)$'s: dtype=uint16
+- exp_sign_chi - Numpy array of $e_\chi(-1)$'s: dtype=uint16
+- num_terms - Numpy array of $T_\chi$'s: dtype=uint64
 
- $$
- [ N, k, \mathfrak f_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
- $$
-
-where
-
-- $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
-- $k$ \- The order of a primitive Dirichlet character $\chi$
-- $\mathfrak{f}_\chi$ \- The conductor of $\chi$
-- $r_\chi$ \- The label of $\chi$
-- $L(E,1,\chi)$ \- The central value of $L(E, s, \chi)$
-- $\tau(\chi)$ \- The Gauss sum of $\chi$
-- $e_\chi(N)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(N)$
-- $c$ \- The least positive integer with $\chi(c)$ is a primitive $k$-th root of unity
-- $e_\chi(c)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(c)$
-- $e_\chi(-1)$ \- The index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
-- $T_\chi$ \- The number of terms computed for the value $L(E,1,\chi)$ in Equation (1)
-
-Note: Even though FLINT and GMP support arbitrary precision integer and float computations, the output float data are of double precision type at most due to the limited support of CUDA.
-
-### Python Data of Algebraic and Integer $L$-values
+### Class object  of Algebraic and Integer $L$-values for E_k_X_alg_int_l_values.zip
 **TODO WHY ZIP? Precision**
 
 The output data consist of the tuples of following 11 entries:
