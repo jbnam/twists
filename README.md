@@ -56,7 +56,9 @@ Notes:
 
 ## 2) Data Conversion and Sample Data Archived
 
-Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python compatible data format using Numpy and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo.
+Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python compatible data format using Numpy and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo. The sample data can be downloaded from the following Zenodo link:
+
+***TODO Zenodo Data Link***
 
 The hardware systems for obtaining these sample data are 
 - OS: Rocky Linux 8.6 with 64 bit support
