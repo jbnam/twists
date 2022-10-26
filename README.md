@@ -48,7 +48,9 @@ $$
 
 where $\text{Nm}$ from $\mathbb Q^+(\chi)$ to $\mathbb Q$ is the field norm.
 
-Note: The twists package uses the label of $E$ as the Cremona's elliptic curve label.
+Notes: 
+- The twists package uses the label of $E$ as the Cremona's elliptic curve label.
+- In computing $L_E^{\text{alg}}(\chi)$, the period lattice $\Omega^\pm$ is computed such that $\Omega^+ \in \mathbb R$ and $\Omega^- \in \mathbb R i$.  
 
 [1] [Hershy Kisilevsky](https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=hershy-kisilevsky) and [Jungbae Nam](https://jbnam.github.io/). *Small Algebraic Central Values of Twists of Elliptic `$L$`-Functions*, 2022 ([Preprint](https://arxiv.org/abs/2001.03547))
 
