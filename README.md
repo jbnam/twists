@@ -12,8 +12,8 @@ For information about the author, visit his personal website (https://jbnam.gith
 If you have a comment/question regarding this codes package and the sample data set, please feel free to contact me at x.y@gmail.com or x.y@concordia.ca where x and y are my first and last name respectively.
 
 ## Download Links for Source Codes and Sample Data
-- Source codes links: the author's github site (https://github.com/jbnam/twists/) or Zenodo archive site (**TODO:id needed**)
-- Sample data link: Zenodo archive site (**TODO:id needed**)
+- Source codes links: The author's GitHub site (https://github.com/jbnam/twists/) or Zenodo archive site
+- Sample data link: The author's Zenodo archive site
 
 ## 1) Introduction
 
@@ -57,9 +57,7 @@ Notes:
 
 ## 2) Data Conversion and Sample Data Archived
 
-Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python compatible data format using Numpy and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo. The sample data can be downloaded from the following Zenodo link:
-
-***TODO Zenodo Data Link***
+Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python compatible data format using Numpy and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo. The sample data can be downloaded from the author's Zenodo dataset archive.
 
 The hardware systems for obtaining these sample data are 
 - OS: Rocky Linux 8.6 with 64 bit support
