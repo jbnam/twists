@@ -114,7 +114,7 @@ The output data consist of the tuples of following 13 entries:
  $$
  [ N, k, \mathfrak f_\chi, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
- 
+
 where
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
 - $k$ \- The order of a primitive Dirichlet character $\chi$
@@ -220,9 +220,11 @@ Note: For better loading procedure and storage saving, the tw_central_l_values a
 
 ### Python Data Converted from Raw Data Obtained by twists_clve 
 The output data consist of the tuples of following 11 entries:
+
  $$
  [ N, k, \mathfrak{f}_\chi, r_{\chi}, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
+
 where
 
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
@@ -243,9 +245,11 @@ Note: Even though FLINT and GMP support arbitrary precision integer and float co
 **TODO WHY ZIP? Precision**
 
 The output data consist of the tuples of following 11 entries:
+
  $$
  [ N, k, \mathfrak{f}_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
  $$
+
 where
 
 - $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
