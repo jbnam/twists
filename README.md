@@ -36,9 +36,9 @@ Note: The twists package uses the label of $E$ as the Cremona's elliptic curve l
 
 ## 2) twists_clve
 
-twists_clve is a command line program written in C/C++ and CUDA for computing and store the following number theoretic values: 
+twists_clve is a command line program written in C/C++ and CUDA for computing and store the values of $L(E, 1, \chi)$ for $\mathcal B_{k,N}(X)$ and some other number theoretic values related with them. For a fixed $E$ and $k$, when $X$ gets large, the computations for obtainig the values of $L(E, 1, \chi)$ demand massive computaional power. 
 
-a linux compatible system with a NVIDIA graphics processing units (GPU). 
+Interestingly, one of the ways to achieve the goal is to use a General Purpose Graphic Processing Units (GPGPU). CUDA is one of those in the present time. For a practical example, for $X$ is a couple of millions and CUDA GPU with around 3000 cores, the total computational time can be reduced by a couple of thousand times faster than using one core of CPU.
 
 ### System and Libraries Requirements
 
