@@ -5,14 +5,15 @@ This repository contains the source codes for computing the central $L$-values o
 
 The information about the sample data produced by the programs is also provided. 
 
-The source codes can be downloaded from the author's github site (https://github.com/jbnam/twists/) or Zenodo archive site (**TODO:id needed**)
-The sample data can also be downloaded from Zenodo archive site (**TODO:id needed**)
-
 The author: Jungbae Nam (aka JB)
 
 For information about the author, visit his personal website (https://jbnam.github.io/). 
 
 If you have a comment/question regarding this codes package and the sample data set, please feel free to contact me at x.y@gmail.com or x.y@concordia.ca where x and y are my first and last name respectively.
+
+## Download Links for Source Codes and Sample Data
+- Source codes links: the author's github site (https://github.com/jbnam/twists/) or Zenodo archive site (**TODO:id needed**)
+- Sample data link: Zenodo archive site (**TODO:id needed**)
 
 ## 1) Introduction
 
@@ -272,24 +273,17 @@ Class tw_central_l_values consists of the following members:
 - num_terms - Numpy array of $T_\chi$'s: dtype=uint64
 
 ### Class object  of Algebraic and Integer $L$-values for E_k_X_alg_int_l_values.zip
-**TODO WHY ZIP? Precision**
-
-The output data consist of the tuples of following 11 entries:
-
- $$
- [ N, k, \mathfrak f_\chi, r_\chi, L(E,1,\chi), \tau(\chi), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
- $$
-
-where
-
-- $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
-- $k$ \- The order of a primitive Dirichlet character $\chi$
-- $\mathfrak{f}_\chi$ \- The conductor of $\chi$
-- $r_\chi$ \- The label of $\chi$
-- $L(E,1,\chi)$ \- The central value of $L(E, s, \chi)$
-- $\tau(\chi)$ \- The Gauss sum of $\chi$
-- $e_\chi(N)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(N)$
-- $c$ \- The least positive integer with $\chi(c)$ is a primitive $k$-th root of unity
-- $e_\chi(c)$ \- The index of $Z_k$ at which the value of $Z_k$ is $\chi(c)$
-- $e_\chi(-1)$ \- The index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
-- $T_\chi$ \- The number of terms computed for the value $L(E,1,\chi)$ in Equation (1)
+Class tw_alg_int_l_values consists of the following members:  
+- E - The elliptic curve associated with E_k_X_central_l_values.npz
+- k - The order of the family of characters associated with E_k_X_central_l_values.npz
+- num_twists - The cardinality of this family
+- X - The maximum conductor in this family: 3 and 1 for $k = 3, 5, 7, 13$ and $k = 6$, respectively
+- g - the greatest common divisor of all $A_\chi$'s in $\mathcal{B}_{k,N}(X)$
+- chi_cond - Numpy array of $\mathfrak f_\chi$'s: dtype=uint32
+- chi_label - Numpy array of $r_\chi$'s: dtype=uint32
+- A_chi_div_g - Numpy array of $A_\chi / g$'s
+- alg_part_l - Numpy array of $L_E^{\text{alg}}(\chi)$'s: dtype=cdouble
+- alp_chi - Numpy array of $\alpha_\chi$'s: dtype=double
+- c - Numpy array of $c$'s: dtype=uint32
+- exp_sign_chi - Numpy array of $e_\chi(-1)$'s: dtype=uint16
+- exp_chi_minus_N - Numpy array of $e_\chi(-N)$'s: dtype=uint16
