@@ -133,7 +133,13 @@ Note: For more detailed requirements of compilers and external libraries above, 
    ?default(primelimit, "200000000")
    ? le = ["11a1"]
    %2 = ["11a1"]
-   ? for(j=1,length(le),E=ellinit(le[j]);van=ellan(E,100000000);fraw=fileopen(concat(concat("./",le[j]),"an_100m.data"),"w");for(k=1,length(van),filewrite(fraw,van[k]););fileclose(fraw);kill(van);print(le[j]););
+   ? {for(j=1,length(le),E=ellinit(le[j]);van=ellan(E,10^8);
+       fraw=fileopen(concat(concat("./",le[j]),"an_100m.data"),"w");
+       for(k=1,length(van),filewrite(fraw,van[k]););
+        fileclose(fraw);
+       kill(van);
+       print(le[j]);
+     );}
    *** ellan: Warning: increasing stack size to 16000000.
    *** ellan: Warning: increasing stack size to 32000000.
    *** ellan: Warning: increasing stack size to 64000000.
