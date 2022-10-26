@@ -1,11 +1,14 @@
 # twists
-Source codes for computing the central $L$-values of $L$-functions of elliptic curves twisted by a family of primitive Dirichlet characters of a fixed order and their algebraic parts and integer values. Moreover, the information about the sample data produced by the programs
+This repository contains the source codes for computing the central $L$-values of $L$-functions of elliptic curves twisted by a family of primitive Dirichlet characters and their algebraic parts and integer values. More precisely, it contains the sources codes of two main programs: 
+- twists_clve
+- twists_ailve
 
-The Author's Name: Jungbae Nam (aka JB)
+The information about the sample data produced by the programs is also provided. 
 
 The source codes can be downloaded from the author's github site (https://github.com/jbnam/twists/) or Zenodo archive site (**TODO:id needed**)
-
 The sample data can also be downloaded from Zenodo archive site (**TODO:id needed**)
+
+The author: Jungbae Nam (aka JB)
 
 For information about the author, visit his personal website (https://jbnam.github.io/). 
 
