@@ -81,8 +81,7 @@ Data file naming convensions for the sample data are
 
 Note: If a data file contains X = 3m (or 1m) in its name, it means the data contains the $L$-values for $\chi$ of conductor less than or equal to $3\cdot 10^6$ (or $10^6$, respectively).
 
-In Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255308.svg)](https://doi.org/10.5281/zenodo.7255308)
-, one can find two zip files: twists_clve_data.zip (17 GB) and twists_ailve_data.zip (13 GB). twists_clve_data.zip and twists_ailve_data.zip contain the E_k_X_central_l_values.npz files and E_k_X_alg_int_l_values.zip files, respectively, with some natural directory structure for k = $3, 5, 6, 7, 13$ and the following elliptic curves E:  
+In Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255308.svg)](https://doi.org/10.5281/zenodo.7255308) one can find two zip files: twists_clve_data.zip (17 GB) and twists_ailve_data.zip (13 GB). twists_clve_data.zip and twists_ailve_data.zip contain the E_k_X_central_l_values.npz files and E_k_X_alg_int_l_values.zip files, respectively, with some natural directory structure for k = $3, 5, 6, 7, 13$ and the following elliptic curves E:  
 ```
 11a1, 14a1, 15a1, 17a1, 19a1, 20a1, 21a1, 24a1, 26a1, 26b1, 27a1, 30a1, 32a1, 33a1, 34a1, 35a1, 
 36a1, 37a1, 37b1, 38a1, 38b1, 39a1, 40a1, 42a1, 43a1, 44a1, 45a1, 46a1, 48a1, 49a1, 50a1, 50b1, 
