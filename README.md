@@ -23,7 +23,7 @@ where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\ch
 
 Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
 $$
-L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_{\chi}\overline{\chi}(n))\frac{a_n}{n}\text{exp}\big(-2\pi n/\mathfrak{f}_\chi \sqrt{N}\big) \tag{1}
+L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp}\big(-2\pi n/\mathfrak f_\chi \sqrt{N}\big) \tag{1}
 $$
 where $a_n$ and $w_E$ are the coefficients and the root number of $L(E, s)$, respectively, and $C_{\chi} = \chi(N) \tau^2(\chi)/\mathfrak{f}_\chi$ where $\tau(\chi)$ is the Gauss sum of $\chi$. Here $\overline{\chi}$ is the complex conjugate of $\chi$ and $\text{exp}$ is the exponential function.
 
