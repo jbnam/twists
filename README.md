@@ -219,6 +219,7 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
 Note: For better loading procedure and storage saving, the tw_central_l_values and tw_alg_int_l_values classes use Numpy for each array element except the A_chi_div_g list of tw_alg_int_l_values class. It is because that the absolute value of an integer element in that list can easily be greater than the maximum allowed for a 64-bit integer (one can find those integer elements for $k = 13$ in the sample data).
 
 ### Python Data Converted from Raw Data Obtained by twists_clve 
+**TODO FINISH IT**
 The output data consist of the tuples of following 11 entries:
 
  $$
