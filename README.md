@@ -19,7 +19,7 @@ If you have a comment/question regarding this codes package and the sample data 
 Let $\mathcal B_k$ be the family of primitive Dirichlet characters of order $k$ and define
 
 $$
-\mathcal B_{k,N}(X) = \lbrace \chi \in \mathcal B_k \mid \mathfrak{f}_\chi \leq X \text{ and } \text{gcd} ( N, \mathfrak f_\chi )=1 \rbrace
+\mathcal B_{k,N}(X) = \lbrace \chi \in \mathcal B_k \mid \mathfrak{f}_\chi \leq X \text{ and } \text{gcd} ( N, \mathfrak{f}_\chi )=1 \rbrace
 $$
 
 where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\chi$ is the conductor of $\chi$. Moreover, denote $\zeta_k := e^{2 \pi i/k}$ and $Z_k := \big[0, \zeta_k, \zeta_k^2, \ldots, \zeta_k^{k-1}, 1\big]$ for a fixed $k$.
