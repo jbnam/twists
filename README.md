@@ -26,7 +26,15 @@ $$
 
 where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\chi$ is the conductor of $\chi$. Moreover, denote $\zeta_k := e^{2 \pi i/k}$ and $Z_k := \big[0, \zeta_k, \zeta_k^2, \ldots, \zeta_k^{k-1}, 1\big]$ for a fixed $k$.
 
-Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. We compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
+Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. Then, the $L$-function of an elliptic curve $E$ twisted by $\chi$ is defined by the following Dirichlet series for $\text{Re}(s) > 3/2$:
+
+$$
+L(E, s, \chi) := \sum_{n \ge 1}\frac{\chi(n)a_n}{n^s} = \prod_{p \nmid N}\Big(1 - \frac{\chi(p)a_p}{p^s} + \frac{\chi^2(p)}{p^{2s-1}}\Big)^{-1}\prod_{p \mid N}\Big(1 - \frac{\chi(p)a_p}{p^s}\Big)^{-1}
+$$
+
+where $a_p$ is the traces of Frobenius of $E$ if $p \nmid N$ and $0, \pm 1$ depending on the reduction type of $E$ modulo $p$ otherwise. It is well-known that it can be analytically continued to $\mathbb{C}$ and satisfies some functional equation which relates $s$ to $2-s$, so that the critical strip is $\{s \in \mathbb{C} \mid 1/2 < \text{Re}(s) < 3/2\}$.
+
+We can compute the values of $L(E, s, \chi)$ at $s = 1$ for $\chi \in \mathcal B_{k,N}(X)$ by the following well-known formula:
 
 $$
 L(E, 1, \chi) = \sum_{n \ge 1}(\chi(n) + w_E C_\chi\overline{\chi}(n))\frac{a_n}{n}\text{exp} (-2\pi n/(\mathfrak f_\chi \sqrt{N}) ) \qquad\qquad(1)
@@ -40,7 +48,7 @@ $$
 L_E^{\text{alg}}(\chi) = \frac{2\tau(\overline{\chi})}{\Omega_\chi}L(E,1,\chi)
 $$ 
 
-where  $\tau(\chi)$ is the Gauss sum of $\chi$ and $\Omega_\chi = \Omega^{\pm}$ is a period df $E$ depending on the signs of $\chi$. It is known that the algebraic part is an algebraic integer in the cyclotomic field $\mathbb{Q}(\chi)$ adjoining with the values of $\chi$.
+where  $\tau(\chi)$ is the Gauss sum of $\chi$ and $\Omega_\chi = \Omega^{\pm}$ is a period of $E$ depending on the signs of $\chi$. It is known that the algebraic part is an algebraic integer in the cyclotomic field $\mathbb{Q}(\chi)$ adjoining with the values of $\chi$.
 
 Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal O_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^\text{alg}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal O_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_\chi^\sigma$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote 
 
@@ -51,24 +59,24 @@ $$
 where $\text{Nm}$ from $\mathbb Q^+(\chi)$ to $\mathbb Q$ is the field norm.
 
 Notes: 
-- The twists package uses the label of $E$ as the Cremona's elliptic curve label.
+- The twists package uses the label of $E$ as Cremona's elliptic curve label.
 - In computing $L_E^{\text{alg}}(\chi)$, the period lattice $\Omega^\pm$ is computed such that $\Omega^+ \in \mathbb R$ and $\Omega^- \in \mathbb R i$.  
 
 [1] [Hershy Kisilevsky](https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=hershy-kisilevsky) and [Jungbae Nam](https://jbnam.github.io/). *Small Algebraic Central Values of Twists of Elliptic L-Functions*, 2022 ([Preprint](https://arxiv.org/abs/2001.03547))
 
 ## 2) Data Conversion and Sample Data Archived
 
-Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python compatible data format using Numpy and stored into Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo. The sample data can be downloaded from the author's Zenodo dataset archive.
+Considering the cloud storage limit of Zenodo, the raw output data obtained by twists_clve are converted into Python-compatible data format using Numpy and stored in Zenodo. Thus, one is recommended to use twists_ailve on SageMath to read these sample data in Zenodo. The sample data can be downloaded from the author's Zenodo dataset archive.
 
 The hardware systems for obtaining these sample data are 
-- OS: Rocky Linux 8.6 with 64 bit support
+- OS: Rocky Linux 8.6 with 64-bit support
 - Memory: 32 GB
 - CPU: Intel® Core™ i7-6700 CPU @ 3.40GHz × 8
 - GPU: NVIDIA GeForce ® GTX 1080 Ti
 
-For the sample data in Zenodo, we compute $L(E, 1, \chi)$ with a massive amount of precomputed $a_n$'s (as will be mentioned below in more detail) so that the errors of its real and imaginary part are at most $10^{-10}$. It implies that the values of $\alpha_\chi \in \mathbb R$ have at least correct first 4 digits.
+For the sample data in Zenodo, we compute $L(E, 1, \chi)$ with a massive amount of precomputed $a_n$'s (as will be mentioned below in more detail) so that the errors of its real and imaginary part are at most $10^{-10}$. It implies that the values of $\alpha_\chi \in \mathbb R$ have at least the correct first 4 digits.
 
-Data file naming convensions for the sample data are
+Data file naming conventions for the sample data are
 - Raw data file generated by twists_clve: E_k_X_raw.dat
   where
   - E \- The Cremona label of $E$
@@ -97,15 +105,15 @@ One can unzip them on your local system and read the data directly with twists_a
 
 ## 3) twists_clve
 
-twists_clve is a command line program written in C/C++ and CUDA for computing and store the values of $L(E, 1, \chi)$ for $\mathcal B_{k,N}(X)$ and some other number theoretic values related with them. For a fixed $E$ and $k$, when $X$ gets large, the computations for obtainig the values of $L(E, 1, \chi)$ demand massive computaional power. 
+twists_clve is a command line program written in C/C++ and CUDA for computing and storing the values of $L(E, 1, \chi)$ for $\mathcal B_{k,N}(X)$ and some other number theoretic values related with them. For a fixed $E$ and $k$, when $X$ gets large, the computations for obtaining the values of $L(E, 1, \chi)$ demand massive computational power. 
 
-Interestingly, one of the ways to achieve the goal is to use a General Purpose Graphic Processing Units (GPGPU). CUDA is one of those in the present time. For a practical example, for $X$ is a couple of millions and CUDA GPU with around 3000 cores, the total computational time can be reduced by a couple of thousand times faster than using one core of CPU.
+Interestingly, one of the ways to achieve this goal is to use General Purpose Graphic Processing Units (GPGPU). CUDA is one of those in the present time. For a practical example, for $X$ is a couple of millions and CUDA GPU with around 3000 cores, the total computational time can be reduced by a couple of thousand times faster than using one core of CPU.
 
 ### System and Libraries Requirements
 
-#### Hardwares and Operating System: 
-- Any OS supported by the following compilers and libraries with memory capacity larger than 10 GB
-- A graphics processing unit supporting CUDA driver ver. 11.4 or later and capability ver. 6.1 or later with global memory capacity larger than 10 GB  
+#### Hardware and Operating System: 
+- Any OS supported by the following compilers and libraries with a memory capacity larger than 10 GB
+- A graphics processing unit supporting CUDA driver ver. 11.4 or later and capability ver. 6.1 or later with a global memory capacity larger than 10 GB  
 
 #### Compilers for Building: 
 - gcc(the GNU Compiler Collection) ver. 2.96 or later (https://gcc.gnu.org/)
@@ -122,10 +130,10 @@ Interestingly, one of the ways to achieve the goal is to use a General Purpose G
 Note: For more detailed requirements of compilers and external libraries above, consult their websites.
 
 ### Instructions for Configuring and Building twists_clve
-1. Download the twists package and unzip it on your working directory.
+1. Download the twists package and unzip it in your working directory.
 2. Check the requirements above for your systems:
    - One can check his/her GPU hardware specifications by building and running "/Samples/1_Utilities/deviceQuery" of the CUDA samples package installed. Refer to deviceQuery_output.txt in the twists package as an example.
-   - The Makefile is written under the assumptions that FLINT and GMP are installed as shared libraries.
+   - The Makefile is written under the assumption that FLINT and GMP are installed as shared libraries.
    - Make sure that helper_cuda.h and helper_string.h, originally located under the directory of /common/ of the CUDA samples package, can be found in an implementation-defined directory by nvcc.
 4. Run Makefile in twists_clve directory by "make" or "make all".
    
@@ -176,7 +184,7 @@ Note: For more detailed requirements of compilers and external libraries above, 
    ```
 
 ### Output Data
-The output data consist of the tuples of following 13 entries:
+The output data consist of the tuples of the following 13 entries:
 
  $$
  [ N, k, \mathfrak f_\chi, r_\chi, \Re(L), \Im(L), \Re(\tau(\chi)), \Im(\tau(\chi)), e_\chi(N), c, e_\chi(c), e_\chi(-1), T_\chi ]
@@ -227,7 +235,7 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
    sage: L = tw_central_l_values.load_from_dat('11a1', 3, './'); print(L[0])
    [11, 3, 7, 1, (1.9971068270600854+1.3284392937855751j), (2.3704694055761992-1.1751062918847859j), 1, 2, 2, 3, 6825]
    ```
-4. Once a tw_central_l_values class object created, one can save it as a npz (Numpy compressed) file into a path. Then, the npz file is saved in
+4. Once a tw_central_l_values class object is created, one can save it as a npz (Numpy compressed) file into a path. Then, the npz file is saved in
    ```
    sage: L.save_to_npz('./')
    ```
@@ -255,7 +263,7 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
    sage: A = tw_alg_int_l_values.load_from_zip('11a1', 3, './'); print(A[0])
    [11, 3, 10, 7, 1, 1, (4.999999999999993+8.660254037844375j), 9.999999999999988, 3, 1]
    ```
-Note: For better loading procedure and storage saving, the tw_central_l_values and tw_alg_int_l_values classes use Numpy for each array element except the A_chi_div_g list of tw_alg_int_l_values class. It is because that the absolute value of an integer element in that list can easily be greater than the maximum allowed for a 64-bit integer (one can find those integer elements for $k = 13$ in the sample data).
+Note: For better loading procedure and storage saving, the tw_central_l_values and tw_alg_int_l_values classes use Numpy for each array element except the A_chi_div_g list of tw_alg_int_l_values class. It is because the absolute value of an integer element in that list can easily be greater than the maximum allowed for a 64-bit integer (one can find those integer elements for $k = 13$ in the sample data).
 
 ### Class object tw_central_l_values for E_k_X_central_l_values.npz
 Class tw_central_l_values consists of the following members:  
