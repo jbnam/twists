@@ -12,7 +12,7 @@ For information about the author, visit his personal website (https://jbnam.gith
 If you have a comment/question regarding this codes package and the sample data set, please feel free to contact me at x.y@gmail.com or x.y@concordia.ca where x and y are my first and last name respectively.
 
 ## Download Links for Source Codes and Sample Data
-- Source codes links: The author's GitHub site (https://github.com/jbnam/twists/) or Zenodo archive site
+- Source codes links: The author's GitHub site (https://github.com/jbnam/twists/) or The author's Zenodo archive site [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255396.svg)](https://doi.org/10.5281/zenodo.7255396)
 - Sample data link: The author's Zenodo archive site [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7255396.svg)](https://doi.org/10.5281/zenodo.7255396)
 
 
