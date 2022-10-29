@@ -29,7 +29,7 @@ where $\text{gcd}$ is the greatest common divisor function and $\mathfrak{f}_\ch
 Let $E$ be an elliptic curve defined over $\mathbb{Q}$ of conductor $N$. Then, the $L$-function of an elliptic curve $E$ twisted by $\chi$ is defined by the following Dirichlet series for $\text{Re}(s) > 3/2$:
 
 $$
-L(E, s, \chi) := \sum_{n \ge 1}\frac{\chi(n)a_n}{n^s} = \prod_{p \nmid N}\Big(1 - \frac{\chi(p)a_p}{p^s} + \frac{\chi^2(p)}{p^{2s-1}}\Big)^{-1}\prod_{p \mid N}\Big(1 - \frac{\chi(p)a_p}{p^s}\Big)^{-1}
+L(E, s, \chi) = \sum_{n \ge 1}\frac{\chi(n)a_n}{n^s} = \prod_{p \nmid N}\Big(1 - \frac{\chi(p)a_p}{p^s} + \frac{\chi^2(p)}{p^{2s-1}}\Big)^{-1}\prod_{p \mid N}\Big(1 - \frac{\chi(p)a_p}{p^s}\Big)^{-1}
 $$
 
 where $a_p$ is the traces of Frobenius of $E$ if $p \nmid N$ and $0, \pm 1$ depending on the reduction type of $E$ modulo $p$ otherwise. It is well-known that it can be analytically continued to $\mathbb{C}$ and satisfies some functional equation which relates $s$ to $2-s$, so that the critical strip is $\{s \in \mathbb{C} \mid 1/2 < \text{Re}(s) < 3/2\}$.
