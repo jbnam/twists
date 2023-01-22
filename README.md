@@ -280,7 +280,7 @@ where
 - $L_E^\text{alg}(\chi)$ \- The algebraic part of $L(E, 1, \chi)$ defined above
 - $\alpha_\chi$ \- Real number defined in Proposition 2.1 of [[1]](#reference) 
 - $e_\chi(-1)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
-- $e_\chi(-N)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
+- $e_\chi(-N)$ \- Index of $Z_k$ at which the value of $Z_k$ is $\chi(-N)$
   
 For $E$: 11a1, $k = 3$, and $\mathfrak{f}_\chi = 7$, as an example,
    ```
