@@ -276,7 +276,7 @@ where
 - $g$ \- The greatest common divisor of the values of $A_\chi$ in this data
 - $\mathfrak{f}_\chi$ \- The conductor of $\chi$
 - $r_\chi$ \- The label of $\chi$
-- $A_\chi/g$ \- $\text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} ( \alpha_\chi )$ divided by $g$
+- $A_\chi/g$ \- $\text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \left( \alpha_\chi \right)$ divided by $g$
 - $L_E^\text{alg}(\chi)$ \- The algebraic part of $L(E, 1, \chi)$ defined above
 - $\alpha_\chi$ \- Real number defined in Proposition 2.1 of [[1]](#reference) 
 - $e_\chi(-1)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
