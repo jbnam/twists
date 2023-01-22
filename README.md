@@ -53,10 +53,10 @@ where  $\tau(\chi)$ is the Gauss sum of $\chi$ and $\Omega_\chi = \Omega^{\pm}$ 
 Denote the maximal real subfield of  $\mathbb{Q}(\chi)$ and its ring of integers by $\mathbb{Q}^+(\chi)$ and $\mathcal O_\chi^+$, respectively. Then, from Proposition 2.1 in [[1]](#reference), for each $L_E^\text{alg}(\chi)$, we can find a real cyclotomic integer $\alpha_\chi \in \mathcal O_\chi^+$ satisfying $\sigma(\alpha_\chi) = \alpha_\chi^\sigma$ for all $\sigma \in \text{G}$, the Galois group of $\mathbb{Q}(\chi)/\mathbb{Q}$. Lastly, denote 
 
 $$
-A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}} \in \mathbb{Z}
+A_\chi = \text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}}(\alpha_\chi) \in \mathbb{Z}
 $$ 
 
-where $\text{Nm}$ from $\mathbb Q^+(\chi)$ to $\mathbb Q$ is the field norm.
+where $\text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}}$ is the field norm from $\mathbb Q^+(\chi)$ to $\mathbb Q$.
 
 Notes: 
 - The twists package uses the label of $E$ as Cremona's elliptic curve label.
@@ -263,6 +263,30 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
    sage: A = tw_alg_int_l_values.load_from_zip('11a1', 3, './'); print(A[0])
    [11, 3, 10, 7, 1, 1, (4.999999999999993+8.660254037844375j), 9.999999999999988, 3, 1]
    ```
+### Output Data
+The output data consist of the tuples of the following 10 entries:
+
+ $$
+ [ N, k, g, \mathfrak{f}_\chi, r_\chi, A_\chi/g, L_E^\text{alg}(\chi), \alpha_\chi, e_\chi(-1), e_\chi(-N)]
+ $$
+
+where
+- $N$ \- The conductor of an elliptic curve $E$ defined over $\mathbb{Q}$
+- $k$ \- The order of a primitive Dirichlet character $\chi$
+- $g$ \- The greatest common divisor of the values of $A_\chi$ in this data
+- $\mathfrak{f}_\chi$ \- The conductor of $\chi$
+- $r_\chi$ \- The label of $\chi$
+- $A_\chi/g$ \- $\text{Nm}_{\mathbb{Q}^+(\chi)/\mathbb{Q}}(\alpha_\chi)$ divided by $g$
+- $L_E^\text{alg}(\chi)$ \- The algebraic part of $L(E, 1, \chi)$ defined above
+- $\alpha_\chi$ \- Real number defined in Proposition 2.1 of [[1]](#reference) 
+- $e_\chi(-1)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
+- $e_\chi(-N)$ \- Index of $Z_k$ at which the value of $Z_k$ is the sign of $\chi$
+  
+For $E$: 11a1, $k = 3$, and $\mathfrak{f}_\chi = 7$, as an example,
+   ```
+   sage: A = tw_alg_int_l_values.load_from_zip('11a1', 3, './'); print(A[0])
+   [11, 3, 10, 7, 1, 1, (4.999999999999993+8.660254037844375j), 9.999999999999988, 3, 1]
+   ```
 Note: For better loading procedure and storage saving, the tw_central_l_values and tw_alg_int_l_values classes use Numpy for each array element except the A_chi_div_g list of tw_alg_int_l_values class. It is because the absolute value of an integer element in that list can easily be greater than the maximum allowed for a 64-bit integer (one can find those integer elements for $k = 13$ in the sample data).
 
 ### Class object tw_central_l_values for E_k_X_central_l_values.npz
@@ -293,6 +317,5 @@ Class tw_alg_int_l_values consists of the following members:
 - A_chi_div_g - Numpy array of $A_\chi / g$'s Python int
 - alg_part_l - Numpy array of $L_E^{\text{alg}}(\chi)$'s: dtype=cdouble
 - alp_chi - Numpy array of $\alpha_\chi$'s: dtype=double
-- c - Numpy array of $c$'s: dtype=uint32
 - exp_sign_chi - Numpy array of $e_\chi(-1)$'s: dtype=uint16
 - exp_chi_minus_N - Numpy array of $e_\chi(-N)$'s: dtype=uint16
