@@ -393,7 +393,6 @@ class tw_central_l_values:
         os_pwd= os.getcwd()
         os.chdir(path)
 
-        #os.makedirs(path+self.E.label(), exist_ok=True)
         f_name = self.E.label()+'_'+str(self.k)+'_'+str(self.X)+'m_central_l_values.npz'
 
         info_twists = np.array([self.E.label(), self.k, self.X])
@@ -526,10 +525,10 @@ class tw_alg_int_l_values:
         such as `k = 13`.
         """
         os.makedirs(path, exist_ok=True)
-        os_pwd= os.getcwd()
+        os_pwd= os.getcwd()        
         os.chdir(path)
-        
-        f_name = path+E_label+'_'+str(k)+'_'+str(X)
+                
+        f_name = E_label+'_'+str(k)+'_'+str(X)
         f_name_zip = f_name+'m_alg_int_l_values.zip'
         f_name_npz = f_name+'m_alg_int_l_values.npz'
         f_name_sobj = f_name+'m_alg_int_l_values.sobj'
@@ -563,7 +562,7 @@ class tw_alg_int_l_values:
         os_pwd= os.getcwd()
         os.chdir(path)
 
-        f_name = path+self.E.label()+'_'+str(self.k)+'_'+str(self.X)
+        f_name = self.E.label()+'_'+str(self.k)+'_'+str(self.X)
         
         f_name_zip = f_name+'m_alg_int_l_values.zip'
         f_name_npz = f_name+'m_alg_int_l_values.npz'
