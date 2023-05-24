@@ -265,7 +265,7 @@ SageMath ver. 9.0 or later (https://www.sagemath.org/)
 The output data consist of the tuples of the following 10 entries:
 
  $$
- [ N, k, g, \mathfrak{f}_\chi, r_\chi, A_\chi/g, L_E^\text{alg}(\chi), \alpha_\chi, e_\chi(-1), e_\chi(-N)]
+ [ N, k, g, \mathfrak{f}_ \chi, r_ \chi, A_ \chi/g, L_E^\text{alg}(\chi), \alpha_ \chi, e_\chi(-1), e_\chi(-N)]
  $$
 
 where
