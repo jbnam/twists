@@ -60,7 +60,7 @@ Notes:
 - The twists package uses the label of $E$ as Cremona's elliptic curve label.
 - In computing $L_E^{\text{alg}}(\chi)$, the period lattice $\Omega^\pm$ is computed such that $\Omega^+ \in \mathbb R$ and $\Omega^- \in \mathbb R i$.  
 
-[1] [Hershy Kisilevsky](https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=hershy-kisilevsky) and [Jungbae Nam](https://jbnam.github.io/). *Small Algebraic Central Values of Twists of Elliptic L-Functions*, 2022 ([Preprint](https://arxiv.org/abs/2001.03547))
+[1] [Hershy Kisilevsky](https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=hershy-kisilevsky) and [Jungbae Nam](https://jbnam.github.io/). *Non-Zero Central Values of Dirichlet Twists of Elliptic L-Functions*, Journal of Number Theory, 266:166-194, 2025 ([Preprint](https://arxiv.org/abs/2001.03547))
 
 ## 2) Data Conversion and Sample Data Archived
 
